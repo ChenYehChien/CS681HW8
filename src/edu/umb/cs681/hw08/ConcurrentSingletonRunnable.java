@@ -12,7 +12,9 @@ public class ConcurrentSingletonRunnable implements Runnable {
 	}
 	
 	public static void main(String[] args) {
-		new Thread(new ConcurrentSingletonRunnable()).start();
+		new Thread(new ConcurrentSingletonRunnable()).start(); //1
+		new Thread(new ConcurrentSingletonRunnable()).start(); //2
+		new Thread(new ConcurrentSingletonRunnable()).start(); //3
 	}
 	
 }
